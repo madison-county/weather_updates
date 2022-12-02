@@ -1,11 +1,11 @@
 Latitude: 44.9056, Longitude: -111.8552
-Weather Report Created at: 2022-12-02-07:25:06.
+Weather Report Created at: 2022-12-02-08:28:23.
 Virginia City, MT.
 GridId: TFX || GridX: 64 || GridY: 24
 
 number : 1 
 name : Today 
-startTime : 2022-12-02T07:00:00-07:00 
+startTime : 2022-12-02T08:00:00-07:00 
 endTime : 2022-12-02T18:00:00-07:00 
 isDaytime : True 
 temperature : 4 
@@ -13,9 +13,9 @@ temperatureUnit : F
 temperatureTrend : falling 
 windSpeed : 17 to 24 mph 
 windDirection : WSW 
-icon : https://api.weather.gov/icons/land/day/blizzard,30/blizzard?size=medium 
+icon : https://api.weather.gov/icons/land/day/blizzard,20/blizzard?size=medium 
 shortForecast : Blowing Snow 
-detailedForecast : Blowing snow and a chance of snow. Partly sunny. High near 4, with temperatures falling to around 0 in the afternoon. Wind chill values as low as -23. West southwest wind 17 to 24 mph, with gusts as high as 30 mph. Chance of precipitation is 30%. New snow accumulation of less than one inch possible. 
+detailedForecast : Blowing snow and a slight chance of snow. Partly sunny. High near 4, with temperatures falling to around 0 in the afternoon. Wind chill values as low as -26. West southwest wind 17 to 24 mph, with gusts as high as 30 mph. Chance of precipitation is 20%. New snow accumulation of less than one inch possible. 
 
 number : 2 
 name : Tonight 

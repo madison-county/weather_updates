@@ -36,6 +36,12 @@ def main():
     pdf.add_page()
     pdf.set_font("Arial", size = 10)
 
+    locations = {
+        "Alder" : "45.3238072222328, -112.10734772283459",
+        "Laurin" : "45.35271239238317, -112.1177774887102",
+        "Sheridan" : "45.45534588182824, -112.19707886464111"
+    }
+
     #print(rel_loc['properties'])
     #print(type(rel_loc_prop))
     #print(rel_loc_prop)
@@ -93,17 +99,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-def write_outputs(f, pdf, string):
-    f.write(out_string)
-    pdf.multi_cell(200, 4, txt=out_string, align="C")
-    for i in range(len(grid_periods)):
-        #print('\n')
-        for key, val in grid_periods[i].items():
-            #print("{} : {}".format(key, val))
-            f.write("{0} : {1} \n".format(key, str(val)))
-            pdf.multi_cell(200, 4, txt = "{0} : {1}".format(key, str(val)), align="L")
-        pdf.cell(200, 10, txt="")
-        f.write("\n")
-    pdf.output("%s.pdf" % f.name.replace('.txt', ""))
-    f.close()

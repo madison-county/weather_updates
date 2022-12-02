@@ -1,5 +1,0 @@
-Latitude: 44.9056, Longitude: -111.8552
-Weather Report Created at: 2022-12-02-08:25:15.
-Virginia City, MT.
-GridId: TFX || GridX: 64 || GridY: 24
-
