@@ -49,21 +49,14 @@ def main():
     grid_request = requests.get(grid_request)
 
     grid_json = json.loads(grid_request.text)
-    #print('JSON Grid: ')
-    #print(grid_json, '\n')
 
     #for key in grid_json:
     #    print(key)
 
-    #print('End grid json loop\n')
-
     grid_properties = grid_json.get('properties')
-    #print('Grid Properties: ')
-    #print(grid_properties, '\n')
 
     #for item in grid_properties:
     #    print(grid_properties[item])
-    #print(grid_properties['elevation'])
 
     grid_periods = grid_properties['periods']
     print("grid_periods type: ", type(grid_periods))
@@ -83,10 +76,8 @@ def main():
         pdf.cell(200, 10, txt="")
         f.write("\n")
 
-    # ******************** PDF Conversion *********************
     pdf.output("%s.pdf" % f.name.replace('.txt', ""))
     f.close()
-
 
     #while True:
     #    print("Enter a forecast to index [0-13] or type 'help' for options: ")
@@ -102,3 +93,17 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+def write_outputs(f, pdf, string):
+    f.write(out_string)
+    pdf.multi_cell(200, 4, txt=out_string, align="C")
+    for i in range(len(grid_periods)):
+        #print('\n')
+        for key, val in grid_periods[i].items():
+            #print("{} : {}".format(key, val))
+            f.write("{0} : {1} \n".format(key, str(val)))
+            pdf.multi_cell(200, 4, txt = "{0} : {1}".format(key, str(val)), align="L")
+        pdf.cell(200, 10, txt="")
+        f.write("\n")
+    pdf.output("%s.pdf" % f.name.replace('.txt', ""))
+    f.close()
