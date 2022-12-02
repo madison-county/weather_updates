@@ -86,8 +86,10 @@ def main():
         grid_request = ("https://api.weather.gov/gridpoints/{0}/{1},{2}/forecast").format(gridId, gridX, gridY)
         grid_request = requests.get(grid_request)
         grid_json = json.loads(grid_request.text)
-    except Exception as err:
+    except ConnectionError as err:
         print("Request error: %s" % err)
+    except Exception as err:
+        print("Another error: %s" % err)
 
     #for key in grid_json:
     #    print(key)
