@@ -82,20 +82,11 @@ def main():
     for key, val in weather_properties.items():
         print("{} : {}".format(key, val))
 
-    try :
-        grid_request = ("https://api.weather.gov/gridpoints/{0}/{1},{2}/forecast").format(gridId, gridX, gridY)
-        grid_request = requests.get(grid_request)
-        grid_json = json.loads(grid_request.text)
-    except ConnectionError as err:
-        print("Request error: %s" % err)
-    except Exception as err:
-        print("Another error: %s" % err)
-
+    grid_json = grid_request(gridId, gridX, gridY)
     #for key in grid_json:
     #    print(key)
 
     grid_properties = grid_json.get('properties')
-
     #for item in grid_properties:
     #    print(grid_properties[item])
 
@@ -146,8 +137,16 @@ def write_out(file, string, grid_periods):
     pdf.output("%s.pdf" % file.name.replace('.txt', ""))
     file.close()
 
-def grid_request():
-    pass
+def grid_request(gridId, gridX, gridY):
+    try :
+        grid_request = ("https://api.weather.gov/gridpoints/{0}/{1},{2}/forecast").format(gridId, gridX, gridY)
+        grid_request = requests.get(grid_request)
+        grid_json = json.loads(grid_request.text)
+    except ConnectionError as err:
+        print("Request error: %s" % err)
+    except Exception as err:
+        print("Another error: %s" % err)
+    return grid_json
 
 if __name__ == "__main__":
     main()
