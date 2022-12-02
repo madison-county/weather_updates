@@ -140,5 +140,8 @@ def grid_request(gridId, gridX, gridY):
         print("Another error: %s" % err)
     return grid_properties
 
+    def user_entry_prompt():
+        pass
+
 if __name__ == "__main__":
     main()
