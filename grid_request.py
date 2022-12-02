@@ -23,15 +23,14 @@ locations = {
 
 def main():
     mission_name = input("Enter a mission name: \n")
-    #latitude = input("Enter the desired latitude: \n")
-    #longitude = input("Enter the desired longitude: \n")
-    latitude = 44.9056
-    longitude = -111.8552
+    #latitude = 44.9056
+    #longitude = -111.8552
 
     manual_prompt = input("Would you like to enter coordinates or search for a town? \nPress 1 to search via Latitude/Longitude coordinates.\nPress 2 for searching saved locations.\n")
     match manual_prompt:
         case '1':
-            # Get user input for coordinates and send request to weather API
+            latitude = input("Enter the desired latitude: \n")
+            longitude = input("Enter the desired longitude: \n")            
             pass
         case '2':
             print('Case 2')
