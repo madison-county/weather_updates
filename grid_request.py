@@ -30,8 +30,10 @@ def main():
     match manual_prompt:
         case '1':
             latitude = input("Enter the desired latitude: \n")
-            longitude = input("Enter the desired longitude: \n")            
-            pass
+            longitude = input("Enter the desired longitude: \n")
+            #current_coords = input("Enter Latitude, Longitude --- Example: 45.2435, -112.54345\n")
+            #print(type(current_coords), current_coords)
+            #latitude, longitude = coordinate_trunc(current_coords)
         case '2':
             print('Case 2')
             valid_input = False
@@ -76,14 +78,16 @@ def main():
     #print(rel_loc_prop)
     #print(rel_loc_prop['city'])
 
-    #print(type(weather_properties))
-    #for key, val in weather_properties.items():
-    #    print("{} : {}".format(key, val))
+    print(type(weather_properties))
+    for key, val in weather_properties.items():
+        print("{} : {}".format(key, val))
 
-    grid_request = ("https://api.weather.gov/gridpoints/{0}/{1},{2}/forecast").format(gridId, gridX, gridY)
-    grid_request = requests.get(grid_request)
-
-    grid_json = json.loads(grid_request.text)
+    try :
+        grid_request = ("https://api.weather.gov/gridpoints/{0}/{1},{2}/forecast").format(gridId, gridX, gridY)
+        grid_request = requests.get(grid_request)
+        grid_json = json.loads(grid_request.text)
+    except Exception as err:
+        print("Request error: %s" % err)
 
     #for key in grid_json:
     #    print(key)
@@ -132,6 +136,9 @@ def coordinate_trunc(coord_list):
     tmp = coord_list[1]
     longitude = tmp[:9]
     return latitude, longitude
+
+def write_to_pdf():
+    pass
 
 if __name__ == "__main__":
     main()
