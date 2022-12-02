@@ -18,11 +18,10 @@ while not valid_input:
     if loc_entry.lower() in locations:
         print("{0} --- Coordinates: {1}".format(loc_entry.capitalize(), locations[loc_entry]))
         current_coords = locations[loc_entry].split(', ')
-        #current_coords = current_coords.split(', ')
         print(type(float(current_coords[0])), current_coords[0])
-        latitude = float(current_coords[0])
-        longitude = float(current_coords[1])
-        print(type(latitude), latitude, type(longitude), longitude)
+        latitude = current_coords[0]
+        longitude = current_coords[1]
+        print(type(latitude), latitude[:7], type(longitude), longitude[:9])
         valid_input = True
     elif loc_entry == "help":
         for key in locations:
