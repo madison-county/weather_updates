@@ -23,33 +23,6 @@ locations = {
 
 def main():
     mission_name = input("Enter a mission name: \n")
-    #latitude = 44.9056
-    #longitude = -111.8552
-
-    #manual_prompt = input("Would you like to enter coordinates or search for a town? \nPress 1 to search via Latitude/Longitude coordinates.\nPress 2 for searching saved locations.\n")
-    #match manual_prompt:
-    #    case '1':
-    #        latitude = input("Enter the desired latitude: \n")
-    #        longitude = input("Enter the desired longitude: \n")
-    #        #current_coords = input("Enter Latitude, Longitude --- Example: 45.2435, -112.54345\n")
-    #        #print(type(current_coords), current_coords)
-    #        #latitude, longitude = coordinate_trunc(current_coords)
-    #    case '2':
-    #        print('Case 2')
-    #        valid_input = False
-    #        while not valid_input:
-    #            loc_entry = input("Enter a location ----- Type help or h for a list of locations\n").strip(" ")
-    #            if loc_entry.lower() in locations:
-    #                print("{0} --- Coordinates: {1}".format(loc_entry.capitalize(), locations[loc_entry]))
-    #                current_coords = locations[loc_entry].split(', ')
-    #                latitude, longitude = coordinate_trunc(current_coords)
-    #                print(type(latitude), latitude, type(longitude), longitude)
-    #                valid_input = True
-    #            elif loc_entry.lower() == "help" or "h":
-    #                for key in locations:
-    #                    print(key.capitalize())
-    #            else:
-    #                print("Error - Location not found")
     latitude, longitude = user_entry_prompt()
 
     print("Creating a 7 day forecast for {0} at coordinates {1}, {2}".format(mission_name, latitude, longitude))
