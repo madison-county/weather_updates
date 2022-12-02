@@ -1,5 +1,12 @@
 import math
 
+def coordinate_trunc(coord_list):
+    tmp = current_coords[0]
+    latitude = tmp[:7]
+    tmp = current_coords[1]
+    longitude = tmp[:9]
+    return latitude, longitude
+
 locations = {
     "alder" : "45.3238072222328, -112.10734772283459",
     "laurin" : "45.35271239238317, -112.1177774887102",
@@ -22,10 +29,7 @@ while not valid_input:
     if loc_entry.lower() in locations:
         print("{0} --- Coordinates: {1}".format(loc_entry.capitalize(), locations[loc_entry]))
         current_coords = locations[loc_entry].split(', ')
-        tmp = current_coords[0]
-        latitude = tmp[:7]
-        tmp = current_coords[1]
-        longitude = tmp[:9]
+        latitude, longitude = coordinate_trunc(current_coords)
         print(type(latitude), latitude, type(longitude), longitude)
         valid_input = True
     elif loc_entry.lower() == "help" or "h":
