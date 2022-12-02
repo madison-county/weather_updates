@@ -76,10 +76,10 @@ def main():
 def coordinate_trunc(coord_list):
     if type(coord_list) == list:
         print("***** {0} found *****".format(type(coord_list)))
-    tmp = coord_list[0]
-    latitude = tmp[:7]
-    tmp = coord_list[1]
-    longitude = tmp[:9]
+        tmp = coord_list[0]
+        latitude = tmp[:7]
+        tmp = coord_list[1]
+        longitude = tmp[:9]
     return latitude, longitude
 
 def write_out(file, string, grid_periods):
