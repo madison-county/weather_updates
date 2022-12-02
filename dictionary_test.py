@@ -3,6 +3,7 @@ locations = {
     "laurin" : "45.35271239238317, -112.1177774887102",
     "sheridan" : "45.45534588182824, -112.19707886464111",
     "twin bridges" : "45.54419121141109, -112.33107814032275",
+    "virginia city" : "45.29428905204298, -111.9402042591855",
     "gravelly range" : "44.92049066357555, -111.83308887669405"
 }
 
@@ -11,9 +12,12 @@ locations = {
 
 valid_input = False
 while not valid_input:
-    loc_entry = input("Enter a location or type help for a list of locations ----- ")
+    loc_entry = input("Enter a location or type help for a list of locations ----- ").strip(" ")
     if loc_entry.lower() in locations:
         print("{0} --- Coordinates: {1}".format(loc_entry.capitalize(), locations[loc_entry]))
+        current_coords = locations[loc_entry].split(', ')
+        #current_coords = current_coords.split(', ')
+        print(type(current_coords[0]), current_coords[0])
         valid_input = True
     elif loc_entry == "help":
         for key in locations:
