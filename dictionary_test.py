@@ -23,20 +23,27 @@ def coordinate_trunc(coord_list):
 #loc_entry = input("Enter a location: \n")
 #print("You entered %s" % loc_entry)
 def main():
-    valid_input = False
-    while not valid_input:
-        loc_entry = input("Enter a location or type 'help' / 'h' for a list of locations ----- ").strip(" ")
-        if loc_entry.lower() in locations:
-            print("{0} --- Coordinates: {1}".format(loc_entry.capitalize(), locations[loc_entry]))
-            current_coords = locations[loc_entry].split(', ')
-            latitude, longitude = coordinate_trunc(current_coords)
-            print(type(latitude), latitude, type(longitude), longitude)
-            valid_input = True
-        elif loc_entry.lower() == "help" or "h":
-            for key in locations:
-                print(key.capitalize())
-        else:
-            print("Error - Location not found")
+    manual_prompt = input("Would you like to enter coordinates or search for a town? \nPress 1 to search via Latitude/Longitude coordinates.\nPress 2 for searching saved locations.\n")
+    match manual_prompt:
+        case '1':
+            # Get user input for coordinates and send request to weather API
+            pass
+        case '2':
+            print('Case 2')
+            valid_input = False
+            while not valid_input:
+                loc_entry = input("Enter a location ----- Type help or h for a list of locations\n").strip(" ")
+                if loc_entry.lower() in locations:
+                    print("{0} --- Coordinates: {1}".format(loc_entry.capitalize(), locations[loc_entry]))
+                    current_coords = locations[loc_entry].split(', ')
+                    latitude, longitude = coordinate_trunc(current_coords)
+                    print(type(latitude), latitude, type(longitude), longitude)
+                    valid_input = True
+                elif loc_entry.lower() == "help" or "h":
+                    for key in locations:
+                        print(key.capitalize())
+                else:
+                    print("Error - Location not found")
 
     #for i in range(len(locations)):
     #    for key, val in locations[i].items():
