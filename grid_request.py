@@ -74,6 +74,8 @@ def main():
     #        print("error: %s --- Enter a number between 0-13)" % err)
 
 def coordinate_trunc(coord_list):
+    if type(coord_list) == list:
+        print("***** {0} found *****".format(type(coord_list)))
     tmp = coord_list[0]
     latitude = tmp[:7]
     tmp = coord_list[1]
