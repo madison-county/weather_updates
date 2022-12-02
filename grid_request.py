@@ -66,27 +66,8 @@ def main():
     #print(grid_properties['elevation'])
 
     grid_periods = grid_properties['periods']
-
-    #for item in grid_periods:
-    #    f.write(item)
-    #    print(item)
-
     print("grid_periods type: ", type(grid_periods))
     print("Length of grid_periods: ", len(grid_periods))
-
-    #print('Grid Periods: \n')
-
-    #number_1 = []
-
-    #for i in range(len(grid_periods)):
-    #    print(grid_periods[i], '\n')
-    #    #(number_{i}) = grid_periods[i]
-    #    number_1.append(grid_periods[i])
-
-    #print('End for loop: \n')
-    #print(len(number_1))
-    #print(number_1[0])
-    #print(grid_periods[0])
 
     out_string = str("Latitude: {0}, Longitude: {1}\nWeather Report Created at: {2}.\n{3}, {4}.\nGridId: {5} || GridX: {6} || GridY: {7}\n\n".format(
         latitude, longitude, current_day, city, state, gridId, gridX, gridY))
