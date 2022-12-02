@@ -73,11 +73,6 @@ def main():
     pdf.add_page()
     pdf.set_font("Arial", size = 10)
 
-    #print(rel_loc['properties'])
-    #print(type(rel_loc_prop))
-    #print(rel_loc_prop)
-    #print(rel_loc_prop['city'])
-
     print(type(weather_properties))
     for key, val in weather_properties.items():
         print("{} : {}".format(key, val))
