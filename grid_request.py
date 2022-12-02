@@ -43,6 +43,9 @@ def main():
         "Twin Bridges" : "45.54419121141109, -112.33107814032275"
     }
 
+    for area in locations:
+        print(area)
+
     #print(rel_loc['properties'])
     #print(type(rel_loc_prop))
     #print(rel_loc_prop)

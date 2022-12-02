@@ -18,17 +18,24 @@ locations = {
     "alder" : "45.3238072222328, -112.10734772283459",
     "laurin" : "45.35271239238317, -112.1177774887102",
     "sheridan" : "45.45534588182824, -112.19707886464111",
-    "twin bridges" : "45.54419121141109, -112.33107814032275"
+    "twin bridges" : "45.54419121141109, -112.33107814032275",
+    "gravelly range" : "44.92049066357555, -111.83308887669405"
 }
 
 for val in locations.items():
    print(val)
 
-loc_entry = input("Enter a location: \n")
+#loc_entry = input("Enter a location: \n")
 #print("You entered %s" % loc_entry)
 
-if loc_entry.lower() in locations:
-    print("{0} found in the dictionary".format(loc_entry.upper()))
+valid_input = False
+while not valid_input:
+    loc_entry = input("Enter a location: \n")
+    if loc_entry.lower() in locations:
+        print("{0} found in the dictionary".format(loc_entry.upper()))
+        valid_input = True
+    else:
+        print("Error - Locations not found")
 
 #for i in range(len(locations)):
 #    for key, val in locations[i].items():
