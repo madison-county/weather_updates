@@ -121,7 +121,6 @@ def user_entry_prompt():
             #print(type(current_coords), current_coords)
             #latitude, longitude = coordinate_trunc(current_coords)
         case '2':
-            print('Case 2')
             valid_input = False
             while not valid_input:
                 loc_entry = input("Enter a location ----- Type help or h for a list of locations\n").strip(" ")
