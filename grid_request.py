@@ -136,7 +136,7 @@ def user_entry_prompt():
                         print(key.capitalize())
                 else:
                     print("Error - Location not found")
-            return latitude, longitude
+    return latitude, longitude
 
 if __name__ == "__main__":
     main()
