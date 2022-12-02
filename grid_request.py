@@ -43,9 +43,6 @@ def main():
     state = rel_loc_prop['state']
 
     f = open("{0}_{1}_{2}_forecast.txt".format(mission_name, current_day, city.replace(" ", "-")), "w+")
-    #pdf = FPDF()
-    #pdf.add_page()
-    #pdf.set_font("Arial", size = 10)
 
     print(type(weather_properties))
     for key, val in weather_properties.items():
