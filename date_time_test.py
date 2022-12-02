@@ -22,20 +22,20 @@ locations = {
     "gravelly range" : "44.92049066357555, -111.83308887669405"
 }
 
-for val in locations.items():
-   print(val)
-
 #loc_entry = input("Enter a location: \n")
 #print("You entered %s" % loc_entry)
 
 valid_input = False
 while not valid_input:
-    loc_entry = input("Enter a location: \n")
+    loc_entry = input("Enter a location or type help for a list of locations ----- ")
     if loc_entry.lower() in locations:
-        print("{0} found in the dictionary".format(loc_entry.upper()))
+        print("{0} --- Coordinates: {1}".format(loc_entry.capitalize(), locations[loc_entry]))
         valid_input = True
+    elif loc_entry == "help":
+        for key in locations:
+            print(key.capitalize())
     else:
-        print("Error - Locations not found")
+        print("Error - Location not found")
 
 #for i in range(len(locations)):
 #    for key, val in locations[i].items():
