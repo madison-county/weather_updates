@@ -104,19 +104,7 @@ def main():
     out_string = str("Latitude: {0}, Longitude: {1}\nWeather Report Created at: {2}.\n{3}, {4}.\nGridId: {5} || GridX: {6} || GridY: {7}\n\n".format(
         latitude, longitude, current_day, city, state, gridId, gridX, gridY))
 
-    f.write(out_string)
-    pdf.multi_cell(200, 4, txt=out_string, align="C")
-    for i in range(len(grid_periods)):
-        #print('\n')
-        for key, val in grid_periods[i].items():
-            #print("{} : {}".format(key, val))
-            f.write("{0} : {1} \n".format(key, str(val)))
-            pdf.multi_cell(200, 4, txt = "{0} : {1}".format(key, str(val)), align="L")
-        pdf.cell(200, 10, txt="")
-        f.write("\n")
-
-    pdf.output("%s.pdf" % f.name.replace('.txt', ""))
-    f.close()
+    write_out(f, out_string, grid_periods)
 
     #while True:
     #    print("Enter a forecast to index [0-13] or type 'help' for options: ")
@@ -137,8 +125,24 @@ def coordinate_trunc(coord_list):
     longitude = tmp[:9]
     return latitude, longitude
 
-def write_to_pdf():
-    pass
+def write_out(file, string, grid_periods):
+    pdf = FPDF()
+    pdf.add_page()
+    pdf.set_font("Arial", size = 10)
+
+    file.write(string)
+    pdf.multi_cell(200, 4, txt=string, align="C")
+
+    for i in range(len(grid_periods)):
+        #print('\n')
+        for key, val in grid_periods[i].items():
+            #print("{} : {}".format(key, val))
+            file.write("{0} : {1} \n".format(key, str(val)))
+            pdf.multi_cell(200, 4, txt = "{0} : {1}".format(key, str(val)), align="L")
+        pdf.cell(200, 10, txt="")
+
+    pdf.output("%s.pdf" % file.name.replace('.txt', ""))
+    file.close()
 
 if __name__ == "__main__":
     main()
