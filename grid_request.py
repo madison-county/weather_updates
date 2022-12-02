@@ -146,5 +146,8 @@ def write_out(file, string, grid_periods):
     pdf.output("%s.pdf" % file.name.replace('.txt', ""))
     file.close()
 
+def grid_request():
+    pass
+
 if __name__ == "__main__":
     main()
