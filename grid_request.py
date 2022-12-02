@@ -36,16 +36,6 @@ def main():
     pdf.add_page()
     pdf.set_font("Arial", size = 10)
 
-    locations = {
-        "Alder" : "45.3238072222328, -112.10734772283459",
-        "Laurin" : "45.35271239238317, -112.1177774887102",
-        "Sheridan" : "45.45534588182824, -112.19707886464111",
-        "Twin Bridges" : "45.54419121141109, -112.33107814032275"
-    }
-
-    for area in locations:
-        print(area)
-
     #print(rel_loc['properties'])
     #print(type(rel_loc_prop))
     #print(rel_loc_prop)
