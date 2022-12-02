@@ -1,3 +1,5 @@
+import math
+
 locations = {
     "alder" : "45.3238072222328, -112.10734772283459",
     "laurin" : "45.35271239238317, -112.1177774887102",
@@ -17,7 +19,10 @@ while not valid_input:
         print("{0} --- Coordinates: {1}".format(loc_entry.capitalize(), locations[loc_entry]))
         current_coords = locations[loc_entry].split(', ')
         #current_coords = current_coords.split(', ')
-        print(type(current_coords[0]), current_coords[0])
+        print(type(float(current_coords[0])), current_coords[0])
+        latitude = float(current_coords[0])
+        longitude = float(current_coords[1])
+        print(type(latitude), latitude, type(longitude), longitude)
         valid_input = True
     elif loc_entry == "help":
         for key in locations:
