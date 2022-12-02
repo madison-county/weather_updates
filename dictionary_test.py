@@ -18,7 +18,7 @@ locations = {
 
 valid_input = False
 while not valid_input:
-    loc_entry = input("Enter a location or type help for a list of locations ----- ").strip(" ")
+    loc_entry = input("Enter a location or type 'help' / 'h' for a list of locations ----- ").strip(" ")
     if loc_entry.lower() in locations:
         print("{0} --- Coordinates: {1}".format(loc_entry.capitalize(), locations[loc_entry]))
         current_coords = locations[loc_entry].split(', ')
@@ -28,7 +28,7 @@ while not valid_input:
         longitude = tmp[:9]
         print(type(latitude), latitude, type(longitude), longitude)
         valid_input = True
-    elif loc_entry == "help":
+    elif loc_entry.lower() == "help" or "h":
         for key in locations:
             print(key.capitalize())
     else:
