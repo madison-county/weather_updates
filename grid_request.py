@@ -26,7 +26,7 @@ def main():
     latitude, longitude = user_entry_prompt()
 
     print("Creating a 7 day forecast for {0} at coordinates {1}, {2}".format(mission_name, latitude, longitude))
-    current_day = datetime.datetime.today().strftime('%Y-%m-%d-%H:%M:%S')
+    current_day = datetime.datetime.today().strftime('%Y-%m-%d-%H%M')
 
     coord_url = ("https://api.weather.gov/points/{0},{1}").format(latitude, longitude)
 
@@ -49,8 +49,10 @@ def main():
         print("{} : {}".format(key, val))
 
     grid_properties = grid_request(gridId, gridX, gridY)
-    #for item in grid_properties:
-    #    print(grid_properties[item])
+    
+    print("*******GROND PROPERTIES: ******")
+    for item in grid_properties:
+        print(grid_properties[item])
 
     grid_periods = grid_properties['periods']
     print("grid_periods type: ", type(grid_periods))
@@ -102,15 +104,19 @@ def write_out(file, string, grid_periods):
     file.close()
 
 def grid_request(gridId, gridX, gridY):
-    try :
-        grid_request = ("https://api.weather.gov/gridpoints/{0}/{1},{2}/forecast").format(gridId, gridX, gridY)
-        grid_request = requests.get(grid_request)
-        grid_json = json.loads(grid_request.text)
-        grid_properties = grid_json.get('properties')
-    except ConnectionError as err:
-        print("Request error: %s" % err)
-    except Exception as err:
-        print("Another error: %s" % err)
+    valid_request = False
+    while not valid_request:
+        try :
+            print("Pinging Weather API with: {0}, {1}, {2}.".format(gridId, gridX, gridY))
+            grid_request = ("https://api.weather.gov/gridpoints/{0}/{1},{2}/forecast").format(gridId, gridX, gridY)
+            grid_request = requests.get(grid_request)
+            grid_json = json.loads(grid_request.text)
+            grid_properties = grid_json.get('properties')
+            valid_request = True
+        except ConnectionError as err:
+            print("Request error: %s" % err)
+        except Exception as err:
+            print("Another error: %s" % err)
     return grid_properties
 
 def user_entry_prompt():
@@ -125,12 +131,12 @@ def user_entry_prompt():
         case '2':
             valid_input = False
             while not valid_input:
-                loc_entry = input("Enter a location ----- Type help or h for a list of locations\n").strip(" ")
-                if loc_entry.lower() in locations:
-                    print("{0} --- Coordinates: {1}".format(loc_entry.capitalize(), locations[loc_entry]))
+                loc_entry = input("Enter a location ----- Type help or h for a list of locations\n").strip(" ").lower()
+                if loc_entry in locations:
+                    #print("{0} --- Coordinates: {1}".format(loc_entry.capitalize(), locations[loc_entry]))
                     current_coords = locations[loc_entry].split(', ')
                     latitude, longitude = coordinate_trunc(current_coords)
-                    print(type(latitude), latitude, type(longitude), longitude)
+                    #print(type(latitude), latitude, type(longitude), longitude)
                     valid_input = True
                 elif loc_entry.lower() == "help" or "h":
                     for key in locations:
