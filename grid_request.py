@@ -18,7 +18,8 @@ locations = {
     "ennis" : "45.34909074316909, -111.73103034191642",
     "mcallister" : "45.44484117129293, -111.73200254488343",
     "gravelly range" : "44.92049066357555, -111.83308887669405",
-    "tobacco roots" : "45.5741139791977, -112.00369955681968"
+    "tobacco roots" : "45.5741139791977, -112.00369955681968",
+    "sar" : "45.65554, -112.69617"
 }
 
 def main():
@@ -110,9 +111,13 @@ def grid_request(gridId, gridX, gridY):
             print("Pinging Weather API with: {0}, {1}, {2}.".format(gridId, gridX, gridY))
             grid_request = ("https://api.weather.gov/gridpoints/{0}/{1},{2}/forecast").format(gridId, gridX, gridY)
             grid_request = requests.get(grid_request)
+            if grid_request.status_code == 500:
+                print("Response code 500 -------- Pinging server again")
+                grid_request = requests.get(grid_request)
             grid_json = json.loads(grid_request.text)
             grid_properties = grid_json.get('properties')
             valid_request = True
+            print("Request C/W", type(grid_properties))
         except ConnectionError as err:
             print("Request error: %s" % err)
         except Exception as err:
