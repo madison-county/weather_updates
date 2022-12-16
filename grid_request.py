@@ -64,18 +64,6 @@ def main():
 
     write_out(f, out_string, grid_periods)
 
-    #while True:
-    #    print("Enter a forecast to index [0-13] or type 'help' for options: ")
-    #    user_entry = input("---- ")
-    #    try:
-    #        if user_entry == "help":
-    #            print("Press <Ctrl + c> to quit")
-    #            print("Indexing for weather starts at '0'\n")
-    #            continue
-    #        print(grid_periods[int(user_entry)])
-    #    except Exception as err:
-    #        print("error: %s --- Enter a number between 0-13)" % err)
-
 def coordinate_trunc(coord_list):
     if type(coord_list) == list:
         print("***** {0} found *****".format(type(coord_list)))
