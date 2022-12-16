@@ -82,9 +82,7 @@ def write_out(file, string, grid_periods):
     pdf.multi_cell(200, 4, txt=string, align="C")
 
     for i in range(len(grid_periods)):
-        #print('\n')
         for key, val in grid_periods[i].items():
-            #print("{} : {}".format(key, val))
             file.write("{0} : {1} \n".format(key, str(val)))
             pdf.multi_cell(200, 4, txt = "{0} : {1}".format(key, str(val)), align="L")
         pdf.cell(200, 10, txt="")
