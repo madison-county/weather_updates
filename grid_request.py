@@ -51,9 +51,9 @@ def main():
 
     grid_properties = grid_request(gridId, gridX, gridY)
     
-    print("*******GROND PROPERTIES: ******")
-    for item in grid_properties:
-        print(grid_properties[item])
+    #print("*******GROND PROPERTIES: ******")
+    #for item in grid_properties:
+    #    print(grid_properties[item])
 
     grid_periods = grid_properties['periods']
     print("grid_periods type: ", type(grid_periods))

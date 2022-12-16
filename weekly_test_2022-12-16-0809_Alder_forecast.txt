@@ -1,0 +1,187 @@
+Latitude: 45.3238, Longitude: -112.1073
+Weather Report Created at: 2022-12-16-0809.
+Alder, MT.
+GridId: TFX || GridX: 58 || GridY: 44
+
+number : 1 
+name : Today 
+startTime : 2022-12-16T08:00:00-07:00 
+endTime : 2022-12-16T18:00:00-07:00 
+isDaytime : True 
+temperature : 23 
+temperatureUnit : F 
+temperatureTrend : falling 
+windSpeed : 7 mph 
+windDirection : SSW 
+icon : https://api.weather.gov/icons/land/day/sct?size=medium 
+shortForecast : Mostly Sunny 
+detailedForecast : Mostly sunny. High near 23, with temperatures falling to around 18 in the afternoon. Wind chill values as low as -2. South southwest wind around 7 mph. 
+number : 2 
+name : Tonight 
+startTime : 2022-12-16T18:00:00-07:00 
+endTime : 2022-12-17T06:00:00-07:00 
+isDaytime : False 
+temperature : 6 
+temperatureUnit : F 
+temperatureTrend : rising 
+windSpeed : 7 mph 
+windDirection : S 
+icon : https://api.weather.gov/icons/land/night/sct?size=medium 
+shortForecast : Partly Cloudy 
+detailedForecast : Partly cloudy. Low around 6, with temperatures rising to around 10 overnight. Wind chill values as low as -1. South wind around 7 mph. 
+number : 3 
+name : Saturday 
+startTime : 2022-12-17T06:00:00-07:00 
+endTime : 2022-12-17T18:00:00-07:00 
+isDaytime : True 
+temperature : 23 
+temperatureUnit : F 
+temperatureTrend : falling 
+windSpeed : 7 to 14 mph 
+windDirection : S 
+icon : https://api.weather.gov/icons/land/day/bkn?size=medium 
+shortForecast : Partly Sunny 
+detailedForecast : Partly sunny. High near 23, with temperatures falling to around 19 in the afternoon. Wind chill values as low as -2. South wind 7 to 14 mph, with gusts as high as 22 mph. 
+number : 4 
+name : Saturday Night 
+startTime : 2022-12-17T18:00:00-07:00 
+endTime : 2022-12-18T06:00:00-07:00 
+isDaytime : False 
+temperature : 3 
+temperatureUnit : F 
+temperatureTrend : None 
+windSpeed : 6 to 13 mph 
+windDirection : S 
+icon : https://api.weather.gov/icons/land/night/cold?size=medium 
+shortForecast : Partly Cloudy 
+detailedForecast : Partly cloudy, with a low around 3. Wind chill values as low as -6. South wind 6 to 13 mph, with gusts as high as 21 mph. 
+number : 5 
+name : Sunday 
+startTime : 2022-12-18T06:00:00-07:00 
+endTime : 2022-12-18T18:00:00-07:00 
+isDaytime : True 
+temperature : 20 
+temperatureUnit : F 
+temperatureTrend : None 
+windSpeed : 6 to 9 mph 
+windDirection : S 
+icon : https://api.weather.gov/icons/land/day/bkn?size=medium 
+shortForecast : Partly Sunny 
+detailedForecast : Partly sunny, with a high near 20. South wind 6 to 9 mph. 
+number : 6 
+name : Sunday Night 
+startTime : 2022-12-18T18:00:00-07:00 
+endTime : 2022-12-19T06:00:00-07:00 
+isDaytime : False 
+temperature : -1 
+temperatureUnit : F 
+temperatureTrend : None 
+windSpeed : 7 mph 
+windDirection : S 
+icon : https://api.weather.gov/icons/land/night/cold?size=medium 
+shortForecast : Mostly Cloudy 
+detailedForecast : Mostly cloudy, with a low around -1. South wind around 7 mph. 
+number : 7 
+name : Monday 
+startTime : 2022-12-19T06:00:00-07:00 
+endTime : 2022-12-19T18:00:00-07:00 
+isDaytime : True 
+temperature : 17 
+temperatureUnit : F 
+temperatureTrend : None 
+windSpeed : 6 to 10 mph 
+windDirection : S 
+icon : https://api.weather.gov/icons/land/day/bkn?size=medium 
+shortForecast : Partly Sunny 
+detailedForecast : Partly sunny, with a high near 17. South wind 6 to 10 mph. 
+number : 8 
+name : Monday Night 
+startTime : 2022-12-19T18:00:00-07:00 
+endTime : 2022-12-20T06:00:00-07:00 
+isDaytime : False 
+temperature : 1 
+temperatureUnit : F 
+temperatureTrend : None 
+windSpeed : 9 mph 
+windDirection : S 
+icon : https://api.weather.gov/icons/land/night/cold?size=medium 
+shortForecast : Mostly Cloudy 
+detailedForecast : Mostly cloudy, with a low around 1. South wind around 9 mph. 
+number : 9 
+name : Tuesday 
+startTime : 2022-12-20T06:00:00-07:00 
+endTime : 2022-12-20T18:00:00-07:00 
+isDaytime : True 
+temperature : 22 
+temperatureUnit : F 
+temperatureTrend : None 
+windSpeed : 10 mph 
+windDirection : S 
+icon : https://api.weather.gov/icons/land/day/snow?size=medium 
+shortForecast : Chance Light Snow 
+detailedForecast : A chance of snow after 11am. Partly sunny, with a high near 22. New snow accumulation of less than half an inch possible. 
+number : 10 
+name : Tuesday Night 
+startTime : 2022-12-20T18:00:00-07:00 
+endTime : 2022-12-21T06:00:00-07:00 
+isDaytime : False 
+temperature : 7 
+temperatureUnit : F 
+temperatureTrend : None 
+windSpeed : 10 mph 
+windDirection : S 
+icon : https://api.weather.gov/icons/land/night/snow?size=medium 
+shortForecast : Chance Light Snow 
+detailedForecast : A chance of snow. Mostly cloudy, with a low around 7. New snow accumulation of less than half an inch possible. 
+number : 11 
+name : Wednesday 
+startTime : 2022-12-21T06:00:00-07:00 
+endTime : 2022-12-21T18:00:00-07:00 
+isDaytime : True 
+temperature : 23 
+temperatureUnit : F 
+temperatureTrend : None 
+windSpeed : 13 mph 
+windDirection : SW 
+icon : https://api.weather.gov/icons/land/day/snow?size=medium 
+shortForecast : Chance Light Snow 
+detailedForecast : A chance of snow. Mostly cloudy, with a high near 23. New snow accumulation of less than half an inch possible. 
+number : 12 
+name : Wednesday Night 
+startTime : 2022-12-21T18:00:00-07:00 
+endTime : 2022-12-22T06:00:00-07:00 
+isDaytime : False 
+temperature : 6 
+temperatureUnit : F 
+temperatureTrend : None 
+windSpeed : 8 to 12 mph 
+windDirection : SSE 
+icon : https://api.weather.gov/icons/land/night/snow?size=medium 
+shortForecast : Chance Light Snow 
+detailedForecast : A chance of snow. Mostly cloudy, with a low around 6. Little or no snow accumulation expected. 
+number : 13 
+name : Thursday 
+startTime : 2022-12-22T06:00:00-07:00 
+endTime : 2022-12-22T18:00:00-07:00 
+isDaytime : True 
+temperature : 30 
+temperatureUnit : F 
+temperatureTrend : None 
+windSpeed : 8 to 12 mph 
+windDirection : SSW 
+icon : https://api.weather.gov/icons/land/day/snow?size=medium 
+shortForecast : Chance Light Snow 
+detailedForecast : A chance of snow. Mostly cloudy, with a high near 30. New snow accumulation of less than half an inch possible. 
+number : 14 
+name : Thursday Night 
+startTime : 2022-12-22T18:00:00-07:00 
+endTime : 2022-12-23T06:00:00-07:00 
+isDaytime : False 
+temperature : 19 
+temperatureUnit : F 
+temperatureTrend : None 
+windSpeed : 12 mph 
+windDirection : SSW 
+icon : https://api.weather.gov/icons/land/night/snow?size=medium 
+shortForecast : Chance Light Snow 
+detailedForecast : A chance of snow. Mostly cloudy, with a low around 19. New snow accumulation of less than half an inch possible. 
