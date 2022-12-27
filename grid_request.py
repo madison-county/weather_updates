@@ -51,9 +51,11 @@ def main():
 
     grid_properties = grid_request(gridId, gridX, gridY)
     
-    #print("*******GROND PROPERTIES: ******")
-    #for item in grid_properties:
-    #    print(grid_properties[item])
+    if grid_properties:
+        print("GROND PROPERTIES FOUND")
+
+    for item in grid_properties:
+        print(grid_properties[item])
 
     grid_periods = grid_properties['periods']
     print("grid_periods type: ", type(grid_periods))
@@ -97,8 +99,9 @@ def grid_request(gridId, gridX, gridY):
             print("Pinging Weather API with: {0}, {1}, {2}.".format(gridId, gridX, gridY))
             grid_request = ("https://api.weather.gov/gridpoints/{0}/{1},{2}/forecast").format(gridId, gridX, gridY)
             grid_request = requests.get(grid_request)
-            if grid_request.status_code == 500:
-                print("Response code 500 -------- Pinging server again")
+            print("*** Return Status {0} ***".format(grid_request.status_code))
+            if grid_request.status_code == 500 or 503:
+                print("Server Error -------- Pinging server again")
                 grid_request = requests.get(grid_request)
             grid_json = json.loads(grid_request.text)
             grid_properties = grid_json.get('properties')
@@ -107,7 +110,7 @@ def grid_request(gridId, gridX, gridY):
         except ConnectionError as err:
             print("Request error: %s" % err)
         except Exception as err:
-            print("Another error: %s" % err)
+            print("Server error code: %s" % err)
     return grid_properties
 
 def user_entry_prompt():
