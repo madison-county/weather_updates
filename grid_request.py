@@ -87,7 +87,10 @@ def write_out(file, string, grid_periods):
     for i in range(len(grid_periods)):
         for key, val in grid_periods[i].items():
             file.write("{0} : {1} \n".format(key, str(val)))
-            pdf.multi_cell(200, 4, txt = "{0} : {1}".format(key, str(val)), align="L")
+            if key == "icon":
+                pdf.image("{}#.PNG".format(val))
+            else:
+                pdf.multi_cell(200, 4, txt = "{0} : {1}".format(key, str(val)), align="L")
         pdf.cell(200, 10, txt="")
 
     pdf.output("%s.pdf" % file.name.replace('.txt', ""))
@@ -105,6 +108,7 @@ def grid_request(gridId, gridX, gridY):
                 case [500, 503]:
                     print("Server Error -------- Pinging server again")
                     grid_request = requests.get(grid_request)
+                    time.sleep(15)
                 case 200:
                     grid_json = json.loads(grid_request.text)
                     grid_properties = grid_json.get('properties')
