@@ -20,13 +20,17 @@ respective image for each subsequent day.
 
 ## External API:
 * `api.weather.gov` is currently the only API being utilized  
-
+* https://www.weather.gov/documentation/services-web-api
 ### Running the program:
 * Running from a CLI is as followed:
     * `p3 grid_requests.py`
     * This will prompt the user to enter a name for the `pdf` output.
     * Next, the user will enter `1` to enter latitude/longitude manually, or enter `2` to used a saved location within the program's dictionary
         * It is possible to type `help` after entering `2` to show a list of potential locations to return a forecast.
+    * Error handling is included for `500` or `503` error responses from the server.
+        * Additionally, it is documented on their site that the server occasionally return `500` errors, which can be negated by re-sending the request.
+        * If a response code of `500` or `503` is returned, the program will wait 15 seconds before sending another requests and continue to do so until the request is successful.
+        * Interupting this loop can be achieved by `Ctrl+C` or `Ctrl+D` via the CLI.
 
 ### Common Problems and Troubleshooting:
 
