@@ -1,0 +1,187 @@
+Latitude: 45.2942, Longitude: -111.9402
+Weather Report Created at: 2022-12-30-1505.
+Virginia City, MT.
+GridId: TFX || GridX: 64 || GridY: 42
+
+number : 1 
+name : This Afternoon 
+startTime : 2022-12-30T15:00:00-07:00 
+endTime : 2022-12-30T18:00:00-07:00 
+isDaytime : True 
+temperature : 32 
+temperatureUnit : F 
+temperatureTrend : falling 
+windSpeed : 14 to 18 mph 
+windDirection : SW 
+icon : https://api.weather.gov/icons/land/day/blizzard,20?size=medium 
+shortForecast : Patchy Blowing Snow 
+detailedForecast : Patchy blowing snow and a slight chance of snow. Mostly sunny. High near 32, with temperatures falling to around 28 in the afternoon. Southwest wind 14 to 18 mph, with gusts as high as 26 mph. Chance of precipitation is 20%. Little or no snow accumulation expected. 
+number : 2 
+name : Tonight 
+startTime : 2022-12-30T18:00:00-07:00 
+endTime : 2022-12-31T06:00:00-07:00 
+isDaytime : False 
+temperature : 21 
+temperatureUnit : F 
+temperatureTrend : rising 
+windSpeed : 6 to 13 mph 
+windDirection : SW 
+icon : https://api.weather.gov/icons/land/night/snow,50/snow,70?size=medium 
+shortForecast : Light Snow Likely 
+detailedForecast : Snow likely. Mostly cloudy. Low around 21, with temperatures rising to around 25 overnight. Southwest wind 6 to 13 mph, with gusts as high as 18 mph. Chance of precipitation is 70%. New snow accumulation of less than one inch possible. 
+number : 3 
+name : Saturday 
+startTime : 2022-12-31T06:00:00-07:00 
+endTime : 2022-12-31T18:00:00-07:00 
+isDaytime : True 
+temperature : 30 
+temperatureUnit : F 
+temperatureTrend : falling 
+windSpeed : 6 to 10 mph 
+windDirection : WSW 
+icon : https://api.weather.gov/icons/land/day/snow,50/snow,20?size=medium 
+shortForecast : Chance Light Snow 
+detailedForecast : A chance of snow before 5pm. Mostly cloudy. High near 30, with temperatures falling to around 26 in the afternoon. West southwest wind 6 to 10 mph. Chance of precipitation is 50%. Little or no snow accumulation expected. 
+number : 4 
+name : Saturday Night 
+startTime : 2022-12-31T18:00:00-07:00 
+endTime : 2023-01-01T06:00:00-07:00 
+isDaytime : False 
+temperature : 15 
+temperatureUnit : F 
+temperatureTrend : None 
+windSpeed : 8 mph 
+windDirection : S 
+icon : https://api.weather.gov/icons/land/night/bkn?size=medium 
+shortForecast : Mostly Cloudy 
+detailedForecast : Mostly cloudy, with a low around 15. South wind around 8 mph. 
+number : 5 
+name : New Year's Day 
+startTime : 2023-01-01T06:00:00-07:00 
+endTime : 2023-01-01T18:00:00-07:00 
+isDaytime : True 
+temperature : 23 
+temperatureUnit : F 
+temperatureTrend : None 
+windSpeed : 7 to 12 mph 
+windDirection : NW 
+icon : https://api.weather.gov/icons/land/day/bkn?size=medium 
+shortForecast : Mostly Cloudy 
+detailedForecast : Mostly cloudy, with a high near 23. Northwest wind 7 to 12 mph. 
+number : 6 
+name : Sunday Night 
+startTime : 2023-01-01T18:00:00-07:00 
+endTime : 2023-01-02T06:00:00-07:00 
+isDaytime : False 
+temperature : 10 
+temperatureUnit : F 
+temperatureTrend : None 
+windSpeed : 7 to 10 mph 
+windDirection : N 
+icon : https://api.weather.gov/icons/land/night/bkn?size=medium 
+shortForecast : Mostly Cloudy 
+detailedForecast : Mostly cloudy, with a low around 10. North wind 7 to 10 mph. 
+number : 7 
+name : Monday 
+startTime : 2023-01-02T06:00:00-07:00 
+endTime : 2023-01-02T18:00:00-07:00 
+isDaytime : True 
+temperature : 22 
+temperatureUnit : F 
+temperatureTrend : None 
+windSpeed : 9 mph 
+windDirection : WSW 
+icon : https://api.weather.gov/icons/land/day/sct?size=medium 
+shortForecast : Mostly Sunny 
+detailedForecast : Mostly sunny, with a high near 22. West southwest wind around 9 mph. 
+number : 8 
+name : Monday Night 
+startTime : 2023-01-02T18:00:00-07:00 
+endTime : 2023-01-03T06:00:00-07:00 
+isDaytime : False 
+temperature : 5 
+temperatureUnit : F 
+temperatureTrend : None 
+windSpeed : 7 to 10 mph 
+windDirection : SSW 
+icon : https://api.weather.gov/icons/land/night/cold?size=medium 
+shortForecast : Mostly Clear 
+detailedForecast : Mostly clear, with a low around 5. South southwest wind 7 to 10 mph. 
+number : 9 
+name : Tuesday 
+startTime : 2023-01-03T06:00:00-07:00 
+endTime : 2023-01-03T18:00:00-07:00 
+isDaytime : True 
+temperature : 21 
+temperatureUnit : F 
+temperatureTrend : None 
+windSpeed : 12 mph 
+windDirection : SSW 
+icon : https://api.weather.gov/icons/land/day/sct?size=medium 
+shortForecast : Mostly Sunny 
+detailedForecast : Mostly sunny, with a high near 21. 
+number : 10 
+name : Tuesday Night 
+startTime : 2023-01-03T18:00:00-07:00 
+endTime : 2023-01-04T06:00:00-07:00 
+isDaytime : False 
+temperature : 5 
+temperatureUnit : F 
+temperatureTrend : None 
+windSpeed : 12 mph 
+windDirection : SSW 
+icon : https://api.weather.gov/icons/land/night/cold?size=medium 
+shortForecast : Partly Cloudy 
+detailedForecast : Partly cloudy, with a low around 5. 
+number : 11 
+name : Wednesday 
+startTime : 2023-01-04T06:00:00-07:00 
+endTime : 2023-01-04T18:00:00-07:00 
+isDaytime : True 
+temperature : 21 
+temperatureUnit : F 
+temperatureTrend : None 
+windSpeed : 14 mph 
+windDirection : SSW 
+icon : https://api.weather.gov/icons/land/day/sct?size=medium 
+shortForecast : Mostly Sunny 
+detailedForecast : Mostly sunny, with a high near 21. 
+number : 12 
+name : Wednesday Night 
+startTime : 2023-01-04T18:00:00-07:00 
+endTime : 2023-01-05T06:00:00-07:00 
+isDaytime : False 
+temperature : 11 
+temperatureUnit : F 
+temperatureTrend : None 
+windSpeed : 14 mph 
+windDirection : S 
+icon : https://api.weather.gov/icons/land/night/sct/snow?size=medium 
+shortForecast : Partly Cloudy then Slight Chance Light Snow 
+detailedForecast : A slight chance of snow after 5am. Partly cloudy, with a low around 11. 
+number : 13 
+name : Thursday 
+startTime : 2023-01-05T06:00:00-07:00 
+endTime : 2023-01-05T18:00:00-07:00 
+isDaytime : True 
+temperature : 29 
+temperatureUnit : F 
+temperatureTrend : None 
+windSpeed : 14 mph 
+windDirection : S 
+icon : https://api.weather.gov/icons/land/day/snow?size=medium 
+shortForecast : Chance Light Snow 
+detailedForecast : A chance of snow. Partly sunny, with a high near 29. 
+number : 14 
+name : Thursday Night 
+startTime : 2023-01-05T18:00:00-07:00 
+endTime : 2023-01-06T06:00:00-07:00 
+isDaytime : False 
+temperature : 19 
+temperatureUnit : F 
+temperatureTrend : None 
+windSpeed : 12 mph 
+windDirection : S 
+icon : https://api.weather.gov/icons/land/night/snow?size=medium 
+shortForecast : Chance Light Snow 
+detailedForecast : A chance of snow. Mostly cloudy, with a low around 19. 
