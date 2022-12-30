@@ -26,7 +26,7 @@ respective weather image for each subsequent day.
     * `p3 grid_requests.py`
     * This will prompt the user to enter a name for the `pdf` output (mission name).
     * Standard output format is `mission name_YYYY-MM-DD-HHMM_Location_forecast`
-        Example: `BC_SAR_2022-12-15-0807_Butte-Silver-Bow-(balance)_forecast`
+        * Example: `example_2022-12-30-1505_Virginia-City_forecast`
     * Next, the user will enter `1` to enter latitude/longitude manually, or enter `2` to used a saved location within the program's dictionary
         * It is possible to type `help` after entering `2` to show a list of potential locations to return a forecast.
     * Error handling is included for `500` or `503` error responses from the server.
@@ -38,3 +38,5 @@ respective weather image for each subsequent day.
 ### Common Problems and Troubleshooting:
 
 ### Additional Comments
+* `cold_2022-12-20-1338_Alder_forecast` is an example of program output
+    * Weather icon images are not included in the
