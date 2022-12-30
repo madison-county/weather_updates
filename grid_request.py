@@ -4,8 +4,9 @@
 import requests
 import json
 import datetime
-from datetime import date
 import os
+import time
+from datetime import date
 from fpdf import FPDF
 
 locations = {
@@ -100,17 +101,21 @@ def grid_request(gridId, gridX, gridY):
             grid_request = ("https://api.weather.gov/gridpoints/{0}/{1},{2}/forecast").format(gridId, gridX, gridY)
             grid_request = requests.get(grid_request)
             print("*** Return Status {0} ***".format(grid_request.status_code))
-            if grid_request.status_code == 500 or 503:
+            if grid_request.status_code == 500:
                 print("Server Error -------- Pinging server again")
                 grid_request = requests.get(grid_request)
-            grid_json = json.loads(grid_request.text)
-            grid_properties = grid_json.get('properties')
-            valid_request = True
-            print("Request C/W", type(grid_properties))
+            elif grid_request.status_code == 503:
+                print("Server Error -------- Pinging server again")
+                grid_request = requests.get(grid_request)
+            elif grid_request.status_code == 200:
+                grid_json = json.loads(grid_request.text)
+                grid_properties = grid_json.get('properties')
+                valid_request = True
+                print("Request C/W", type(grid_properties))
         except ConnectionError as err:
             print("Request error: %s" % err)
-        except Exception as err:
-            print("Server error code: %s" % err)
+        #except Exception as err:
+            #print("Server error code: %s" % err)
     return grid_properties
 
 def user_entry_prompt():
