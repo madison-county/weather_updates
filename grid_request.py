@@ -88,6 +88,7 @@ def write_out(file, string, grid_periods):
         for key, val in grid_periods[i].items():
             file.write("{0} : {1} \n".format(key, str(val)))
             if key == "icon":
+                # ??? it works
                 pdf.image("{}#.PNG".format(val))
             else:
                 pdf.multi_cell(200, 4, txt = "{0} : {1}".format(key, str(val)), align="L")
