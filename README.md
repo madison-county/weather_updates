@@ -30,6 +30,7 @@ respective image for each subsequent day.
     * Error handling is included for `500` or `503` error responses from the server.
         * Additionally, it is documented on their site that the server occasionally return `500` errors, which can be negated by re-sending the request.
         * If a response code of `500` or `503` is returned, the program will wait 15 seconds before sending another requests and continue to do so until the request is successful.
+            * `Known Issues` can be found from the API link above, under the `Updates` tab.
         * Interupting this loop can be achieved by `Ctrl+C` or `Ctrl+D` via the CLI.
 
 ### Common Problems and Troubleshooting:
