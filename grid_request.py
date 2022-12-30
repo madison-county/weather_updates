@@ -105,12 +105,6 @@ def grid_request(gridId, gridX, gridY):
                 case [500, 503]:
                     print("Server Error -------- Pinging server again")
                     grid_request = requests.get(grid_request)
-                #case 503:
-                #    print("Server Error -------- Pinging server again")
-                #    grid_request = requests.get(grid_request)              
-            #elif grid_request.status_code == 503:
-                #print("Server Error -------- Pinging server again")
-                #grid_request = requests.get(grid_request)
                 case 200:
                     grid_json = json.loads(grid_request.text)
                     grid_properties = grid_json.get('properties')
