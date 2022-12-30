@@ -38,5 +38,4 @@ respective weather image for each subsequent day.
 ### Common Problems and Troubleshooting:
 
 ### Additional Comments
-* `cold_2022-12-20-1338_Alder_forecast` is an example of program output
-    * Weather icon images are not included in the
+* `example_2022-12-30-1505_Virginia-City_forecast` is an example of program output
