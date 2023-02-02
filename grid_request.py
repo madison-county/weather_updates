@@ -36,9 +36,6 @@ def main():
     f = open("{0}_{1}_{2}_forecast.txt".format(mission_name, current_day, city.replace(" ", "-")), "w+")
 
     grid_properties = grid_request(gridId, gridX, gridY)
-    
-    if grid_properties:
-        print("GROND PROPERTIES FOUND")
 
     for item in grid_properties:
         print(grid_properties[item])
