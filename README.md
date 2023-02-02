@@ -42,3 +42,4 @@ respective weather image for each subsequent day.
 * Weather Stations listings:
     * https://www.weather.gov/NWR/stations?State=MT
 * MT Weather Station Codes (Not updated on the aforementioned link):
+    * Billings: `KBLX`
