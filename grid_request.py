@@ -33,6 +33,8 @@ def main():
     weather_properties = coordinate_request(latitude, longitude)
     gridId, gridX, gridY, rel_loc, rel_loc_prop, city, state = get_grid_fields(weather_properties)
 
+    print('Returning forecast for {}, {}'.format(city, state))
+
     f = open("{0}_{1}_{2}_forecast.txt".format(mission_name, current_day, city.replace(" ", "-")), "w+")
 
     grid_properties = grid_request(gridId, gridX, gridY)
