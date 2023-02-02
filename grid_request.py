@@ -112,6 +112,17 @@ def coordinate_request(latitude, longitude):
 
     return weather_properties
 
+def get_grid_fields(weather_properties):
+    gridId = weather_properties['gridId']
+    gridX = weather_properties['gridX']
+    gridY = weather_properties['gridY']
+    rel_loc = weather_properties['relativeLocation']
+    rel_loc_prop = rel_loc['properties']
+    city = rel_loc_prop['city']
+    state = rel_loc_prop['state']
+
+    return gridId, gridX, gridY, rel_loc, rel_loc_prop, city, state
+
 def user_entry_prompt():
     manual_prompt = input("Would you like to enter coordinates or search for a town? \nPress 1 to search via Latitude/Longitude coordinates.\nPress 2 for searching saved locations.\n")
     match manual_prompt:
@@ -137,17 +148,6 @@ def user_entry_prompt():
                 else:
                     print("Error - Location not found")
     return latitude, longitude
-
-def get_grid_fields(weather_properties):
-    gridId = weather_properties['gridId']
-    gridX = weather_properties['gridX']
-    gridY = weather_properties['gridY']
-    rel_loc = weather_properties['relativeLocation']
-    rel_loc_prop = rel_loc['properties']
-    city = rel_loc_prop['city']
-    state = rel_loc_prop['state']
-
-    return gridId, gridX, gridY, rel_loc, rel_loc_prop, city, state
 
 if __name__ == "__main__":
     main()
