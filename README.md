@@ -21,6 +21,7 @@ respective weather image for each subsequent day.
 ## External API:
 * `api.weather.gov` is currently the only API being utilized  
 * https://www.weather.gov/documentation/services-web-api
+
 ### Running the program:
 * Running from a CLI is as followed:
     * `p3 grid_requests.py`
