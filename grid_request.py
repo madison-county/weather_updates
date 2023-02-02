@@ -30,11 +30,7 @@ def main():
     print("Creating a 7 day forecast for {0} at coordinates {1}, {2}".format(mission_name, latitude, longitude))
     current_day = datetime.datetime.today().strftime('%Y-%m-%d-%H%M')
 
-    coord_url = ("https://api.weather.gov/points/{0},{1}").format(latitude, longitude)
-
-    weather_request = requests.get(coord_url)
-    weather_json = json.loads(weather_request.text)
-    weather_properties = weather_json.get('properties')
+    weather_properties = coordinate_request(latitude, longitude)
 
     gridId = weather_properties['gridId']
     gridX = weather_properties['gridX']
@@ -45,10 +41,6 @@ def main():
     state = rel_loc_prop['state']
 
     f = open("{0}_{1}_{2}_forecast.txt".format(mission_name, current_day, city.replace(" ", "-")), "w+")
-
-    print(type(weather_properties))
-    for key, val in weather_properties.items():
-        print("{} : {}".format(key, val))
 
     grid_properties = grid_request(gridId, gridX, gridY)
     
@@ -147,8 +139,14 @@ def user_entry_prompt():
                     print("Error - Location not found")
     return latitude, longitude
 
-def coordinate_request():
-    pass
+def coordinate_request(latitude, longitude):
+    coord_url = ("https://api.weather.gov/points/{0},{1}").format(latitude, longitude)
+
+    weather_request = requests.get(coord_url)
+    weather_json = json.loads(weather_request.text)
+    weather_properties = weather_json.get('properties')
+
+    return weather_properties
 
 if __name__ == "__main__":
     main()
