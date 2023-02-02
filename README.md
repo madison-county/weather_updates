@@ -39,3 +39,5 @@ respective weather image for each subsequent day.
 
 ### Additional Comments
 * `example_2022-12-30-1505_Virginia-City_forecast` is an example of program output
+* Weather Stations listings:
+    * https://www.weather.gov/NWR/stations?State=MT
