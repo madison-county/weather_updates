@@ -45,3 +45,4 @@ respective weather image for each subsequent day.
     * Billings: `KBLX`
     * Great Falls: `KTFX`
     * Glasgow: `KGGW`
+    * Missoula: `KMSX`
