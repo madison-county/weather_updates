@@ -147,5 +147,8 @@ def user_entry_prompt():
                     print("Error - Location not found")
     return latitude, longitude
 
+def coordinate_request():
+    pass
+
 if __name__ == "__main__":
     main()
