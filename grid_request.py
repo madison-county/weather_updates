@@ -31,14 +31,7 @@ def main():
     current_day = datetime.datetime.today().strftime('%Y-%m-%d-%H%M')
 
     weather_properties = coordinate_request(latitude, longitude)
-
-    gridId = weather_properties['gridId']
-    gridX = weather_properties['gridX']
-    gridY = weather_properties['gridY']
-    rel_loc = weather_properties['relativeLocation']
-    rel_loc_prop = rel_loc['properties']
-    city = rel_loc_prop['city']
-    state = rel_loc_prop['state']
+    get_grid_fields(weather_properties)
 
     f = open("{0}_{1}_{2}_forecast.txt".format(mission_name, current_day, city.replace(" ", "-")), "w+")
 
@@ -149,7 +142,13 @@ def coordinate_request(latitude, longitude):
     return weather_properties
 
 def get_grid_fields(weather_properties):
-    pass
+    gridId = weather_properties['gridId']
+    gridX = weather_properties['gridX']
+    gridY = weather_properties['gridY']
+    rel_loc = weather_properties['relativeLocation']
+    rel_loc_prop = rel_loc['properties']
+    city = rel_loc_prop['city']
+    state = rel_loc_prop['state']
 
 if __name__ == "__main__":
     main()
