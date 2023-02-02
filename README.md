@@ -44,3 +44,4 @@ respective weather image for each subsequent day.
 * MT Weather Station Codes (Not updated on the aforementioned link):
     * Billings: `KBLX`
     * Great Falls: `KTFX`
+    * Glasgow: `KGGW`
