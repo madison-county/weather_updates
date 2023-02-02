@@ -38,7 +38,7 @@ def main():
     grid_properties = grid_request(gridId, gridX, gridY)
 
     for item in grid_properties:
-        print(grid_properties[item])
+        print('***** Grid Properties: {} *****'.format(grid_properties[item]))
 
     grid_periods = grid_properties['periods']
     print("grid_periods type: ", type(grid_periods))
@@ -103,6 +103,15 @@ def grid_request(gridId, gridX, gridY):
             print("Server error code: %s" % err)
     return grid_properties
 
+def coordinate_request(latitude, longitude):
+    coord_url = ("https://api.weather.gov/points/{0},{1}").format(latitude, longitude)
+
+    weather_request = requests.get(coord_url)
+    weather_json = json.loads(weather_request.text)
+    weather_properties = weather_json.get('properties')
+
+    return weather_properties
+
 def user_entry_prompt():
     manual_prompt = input("Would you like to enter coordinates or search for a town? \nPress 1 to search via Latitude/Longitude coordinates.\nPress 2 for searching saved locations.\n")
     match manual_prompt:
@@ -128,15 +137,6 @@ def user_entry_prompt():
                 else:
                     print("Error - Location not found")
     return latitude, longitude
-
-def coordinate_request(latitude, longitude):
-    coord_url = ("https://api.weather.gov/points/{0},{1}").format(latitude, longitude)
-
-    weather_request = requests.get(coord_url)
-    weather_json = json.loads(weather_request.text)
-    weather_properties = weather_json.get('properties')
-
-    return weather_properties
 
 def get_grid_fields(weather_properties):
     gridId = weather_properties['gridId']
