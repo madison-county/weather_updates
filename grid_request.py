@@ -148,5 +148,8 @@ def coordinate_request(latitude, longitude):
 
     return weather_properties
 
+def get_grid_fields(weather_properties):
+    pass
+
 if __name__ == "__main__":
     main()
