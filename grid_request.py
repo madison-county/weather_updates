@@ -92,7 +92,7 @@ def grid_request(gridId, gridX, gridY):
             print(f'Pinging Weather API with: {gridId}, {gridX}, {gridY}.')
             grid_request = (f'https://api.weather.gov/gridpoints/{gridId}/{gridX},{gridY}/forecast')
             grid_request = requests.get(grid_request)
-            print("*** Return Status {0} ***".format(grid_request.status_code))
+            print(f'*** Return Status {grid_request.status_code} ***')
             match grid_request.status_code:
                 case [500, 503]:
                     print("Server Error -------- Pinging server again")
