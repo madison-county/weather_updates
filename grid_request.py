@@ -46,6 +46,7 @@ def main():
     print("grid_periods type: ", type(grid_periods))
     print("Length of grid_periods: ", len(grid_periods))
 
+    # TODO - Refactor to match other string interpolation methods
     out_string = str("Latitude: {0}, Longitude: {1}\nWeather Report Created at: {2}.\n{3}, {4}.\nGridId: {5} || GridX: {6} || GridY: {7}\n\n".format(
         latitude, longitude, current_day, city, state, gridId, gridX, gridY))
 
@@ -53,7 +54,7 @@ def main():
 
 def coordinate_trunc(coord_list):
     if type(coord_list) == list:
-        print("***** {0} found *****".format(type(coord_list)))
+        print(f'***** {type(coord_list)} found *****')
         tmp = coord_list[0]
         latitude = tmp[:7]
         tmp = coord_list[1]
