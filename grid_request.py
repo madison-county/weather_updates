@@ -40,7 +40,7 @@ def main():
     grid_properties = grid_request(gridId, gridX, gridY)
 
     for item in grid_properties:
-        print('***** Grid Properties: {} *****'.format(grid_properties[item]))
+        print('***** Grid Properties: {} *****\n'.format(grid_properties[item]))
 
     grid_periods = grid_properties['periods']
     print("grid_periods type: ", type(grid_periods))
@@ -74,6 +74,9 @@ def write_out(file, string, grid_periods):
             if key == "icon":
                 # ??? it works
                 pdf.image("{}#.PNG".format(val))
+            # TODO - Parse JSON if a dictionary is returned
+            elif type(val) == dict:
+                print('************ DICTIONARY FOUND ***********\n')
             else:
                 pdf.multi_cell(200, 4, txt = "{0} : {1}".format(key, str(val)), align="L")
         pdf.cell(200, 10, txt="")
