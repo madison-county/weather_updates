@@ -106,7 +106,7 @@ def grid_request(gridId, gridX, gridY):
         except ConnectionError as err:
             print(f'Request error: {err}')
         except Exception as err:
-            print("Server error code: %s" % err)
+            print(f'Server error code: {err}')
     return grid_properties
 
 def coordinate_request(latitude, longitude):
