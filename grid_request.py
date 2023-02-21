@@ -74,9 +74,9 @@ def write_out(file, string, grid_periods):
             if key == "icon":
                 # ??? it works
                 pdf.image("{}#.PNG".format(val))
-            # TODO - Parse JSON if a dictionary is returned
             elif type(val) == dict:
                 print(val["value"])
+                pdf.multi_cell(200, 4, txt=f'{key} : {val["value"]}', align="L")
             else:
                 pdf.multi_cell(200, 4, txt = "{0} : {1}".format(key, str(val)), align="L")
         pdf.cell(200, 10, txt="")
