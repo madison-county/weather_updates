@@ -76,7 +76,7 @@ def write_out(file, string, grid_periods):
                 pdf.image("{}#.PNG".format(val))
             # TODO - Parse JSON if a dictionary is returned
             elif type(val) == dict:
-                print('************ DICTIONARY FOUND ***********\n')
+                print(val["value"])
             else:
                 pdf.multi_cell(200, 4, txt = "{0} : {1}".format(key, str(val)), align="L")
         pdf.cell(200, 10, txt="")
