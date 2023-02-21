@@ -110,7 +110,7 @@ def grid_request(gridId, gridX, gridY):
     return grid_properties
 
 def coordinate_request(latitude, longitude):
-    coord_url = ("https://api.weather.gov/points/{0},{1}").format(latitude, longitude)
+    coord_url = (f'https://api.weather.gov/points/{latitude},{longitude}')
 
     weather_request = requests.get(coord_url)
     weather_json = json.loads(weather_request.text)
