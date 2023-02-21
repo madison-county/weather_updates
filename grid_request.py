@@ -104,7 +104,7 @@ def grid_request(gridId, gridX, gridY):
                     valid_request = True
                     print("Request C/W", type(grid_properties))
         except ConnectionError as err:
-            print("Request error: %s" % err)
+            print(f'Request error: {err}')
         except Exception as err:
             print("Server error code: %s" % err)
     return grid_properties
