@@ -89,7 +89,7 @@ def grid_request(gridId, gridX, gridY):
     valid_request = False
     while not valid_request:
         try :
-            print("Pinging Weather API with: {0}, {1}, {2}.".format(gridId, gridX, gridY))
+            print(f'Pinging Weather API with: {gridId}, {gridX}, {gridY}.')
             grid_request = ("https://api.weather.gov/gridpoints/{0}/{1},{2}/forecast").format(gridId, gridX, gridY)
             grid_request = requests.get(grid_request)
             print("*** Return Status {0} ***".format(grid_request.status_code))
