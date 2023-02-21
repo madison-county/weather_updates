@@ -78,7 +78,7 @@ def write_out(file, string, grid_periods):
                 print(val["value"])
                 pdf.multi_cell(200, 4, txt=f'{key} : {val["value"]}', align="L")
             else:
-                pdf.multi_cell(200, 4, txt = "{0} : {1}".format(key, str(val)), align="L")
+                pdf.multi_cell(200, 4, txt = f'{key} : {str(val)}', align="L")
         pdf.cell(200, 10, txt="")
 
     pdf.output("%s.pdf" % file.name.replace('.txt', ""))
