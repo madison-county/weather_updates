@@ -47,8 +47,7 @@ def main():
     print("Length of grid_periods: ", len(grid_periods))
 
     # TODO - Refactor to match other string interpolation methods
-    out_string = str("Latitude: {0}, Longitude: {1}\nWeather Report Created at: {2}.\n{3}, {4}.\nGridId: {5} || GridX: {6} || GridY: {7}\n\n".format(
-        latitude, longitude, current_day, city, state, gridId, gridX, gridY))
+    out_string = str(f'Latitude: {latitude}, Longitude: {longitude}\nWeather Report Created at: {current_day}.\n{city}, {state}.\nGridId: {gridId} || GridX: {gridX} || GridY: {gridY}\n\n')
 
     write_out(f, out_string, grid_periods)
 
