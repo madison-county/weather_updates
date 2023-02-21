@@ -40,7 +40,7 @@ def main():
     grid_properties = grid_request(gridId, gridX, gridY)
 
     for item in grid_properties:
-        print('***** Grid Properties: {} *****\n'.format(grid_properties[item]))
+        print(f'***** Grid Properties: {grid_properties[item]} *****\n')
 
     grid_periods = grid_properties['periods']
     print("grid_periods type: ", type(grid_periods))
