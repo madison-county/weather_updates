@@ -35,7 +35,7 @@ def main():
 
     print(f'Returning forecast for {city}, {state}')
 
-    f = open("{0}_{1}_{2}_forecast.txt".format(mission_name, current_day, city.replace(" ", "-")), "w+")
+    f = open(f'{mission_name}_{current_day}_{city.replace(" ", "-")}_forecast.txt', 'w+')
 
     grid_properties = grid_request(gridId, gridX, gridY)
 
