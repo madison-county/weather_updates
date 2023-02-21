@@ -27,7 +27,7 @@ def main():
     mission_name = input("Enter a mission name: \n")
     latitude, longitude = user_entry_prompt()
 
-    print("Creating a 7 day forecast for {0} at coordinates {1}, {2}".format(mission_name, latitude, longitude))
+    print(f'Creating a 7 day forecast for {mission_name} at coordinates {latitude}, {longitude}')
     current_day = datetime.datetime.today().strftime('%Y-%m-%d-%H%M')
 
     weather_properties = coordinate_request(latitude, longitude)
